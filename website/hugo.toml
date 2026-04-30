@@ -1,0 +1,4 @@
+baseURL = "https://nanchenlab.github.io/nanchen-lab/"
+languageCode = "en-us"
+title = "Nanchen Lab"
+theme = "PaperMod"
