@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Hugo Deploy
 
 on:
   push:
@@ -20,12 +20,12 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: latest
 
       - name: Build
         run: hugo --minify
 
-      - name: Upload artifact
+      - name: Upload
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
@@ -34,5 +34,5 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: actions/deploy-pages@v4
